@@ -1,57 +1,646 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- PAGE settings -->
-  <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
   <title>Volgue Sistemas</title>
-  <!-- CSS dependencies -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="wireframe.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/unnamed (1).png">
+  <!--BOOTSTRAP ICONS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <!-- Certifique-se de incluir os arquivos CSS e JavaScript do Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--FIM BOOTSTRAP ICONS-->
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-Uv9jxBenhLL1+qzfUyxk5wrP+L5qvhwLTP60qjzTpL8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+
+  <!-- Libraries CSS Files -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/latest/css/all.min.css" integrity="sha512-Yi+QvDkqQrwCkWQ2jWkWIEoir+x6pzl54Z2p7z89cMj5LIusMVXLfm3ocN5CDeN39xTqgeJ7Ldbf/CWkWCoqGxw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+
+  <!-- Main Stylesheet File -->
+  <link href="style.css" rel="stylesheet">
+
 </head>
 
-<body class="text-center bg-dark" style="	background-image: url(https://pingendo.com/site-assets/cover.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
-  <div class="p-3 h-100 d-flex flex-column" style="	background-image: url(https://www.cigam.com.br/bd/blog-post/tecnologia-low-code1663866173.webp);	background-position: top left, top left;	background-size: cover, cover;	background-repeat: repeat, repeat;">
-    <div class="container mb-auto">
-      <div class="row">
-        <div class="mx-auto col-md-9">
-          <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container">
-              <a class="navbar-brand" href="#"><b>Volgue Sistemas</b></a>
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> </button>
-              <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
-              </div>
+<body id="page-top">
+    <script>
+        function scrollToSection(sectionId, offset = 150) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const sectionOffset = section.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: sectionOffset,
+                    behavior: "smooth"
+                });
+            } else {
+                console.error("Elemento com ID " + sectionId + " não encontrado.");
+            }
+        }
+    </script>  
+    <script>
+function toggleText(initialId, moreId, buttonId) {
+    var initialText = document.getElementById(initialId);
+    var moreText = document.getElementById(moreId);
+    var button = document.getElementById(buttonId);
+
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "block";
+        button.textContent = "Leia Menos";
+    } else {
+        moreText.style.display = "none";
+        button.textContent = "Leia Mais";
+    }
+}
+
+    </script> 
+    
+    <!-- Menu/NavBar -->
+    
+    
+    <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top">
+        <div class="container">
+            <a class="navbar-brand js-scroll" href="#page-top">
+                <img src="img/logo_semfundo.png" width="180" height="auto" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item text-right-mobile">
+                        <a class="nav-link js-scroll" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item text-right-mobile">
+                        <a class="nav-link js-scroll" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item text-right-mobile">
+                        <a class="nav-link js-scroll" href="#service">Serviços</a>
+                    </li>
+                    <li class="nav-item text-right-mobile"> <!-- Adicione a classe text-right-mobile aqui -->
+                        <a class="nav-link js-scroll" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item text-right-mobile">
+                        <a class="nav-link js-scroll" href="#contact">Contato</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
         </div>
+    </nav>
+    
+    <!-- Icone WhatsApp -->
+
+   <div class="whats">
+    <a href=" https://wa.me/5511940090003?text=Olá, Gostaria de fazer um orçamento!!" target="_blank">
+    <img src="img/whats.png" width="50" alt="Fale Conosco pelo WhatsApp" title="Fale Conosco pelo WhatsApp">
+    </a>
+    </div>
+
+    <!-- Pagina Inicial, Sistema PDV -->
+        
+    <div id="home" class="intro route bg-image" style="background-image: url('img/fundo_walpapers.jpg'); ">
+        <div class="overlay-itro"></div>
+        <div class="intro-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <div class="col-md-12">
+                    <h1 class="intro-title mb-4">Sistema PDV</h1>
+                    <p class="intro-subtitle">Realize compras para seu negócio de forma simples e pratica.</p> <span></span>
+                    </div>
+                    <div class="col-md-12">
+                    <section id="saiba-mais" class="section-with-padding"></section>
+                      <button onclick="scrollToSection('sistemapdv')" name="serviço" class="button button-a button-big button-rouded"> Saiba Mais</button>
+                    </section>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Pagina 2 -->
+
+    <section id="about" class="about-mf sect-pt4 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="box-shadow-full" style="text-align: center;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="about-img">
+                                            <img src="img/sistemaPDV.PNG" style="width: 300px; height: auto;" class="rounded b-shadow-a" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-me pt-4 pt-md-0">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            PDV - Varejo
+                                        </h5>
+                                    </div>
+                                    <p class="lead">
+                                      PDV Varejo é um sistema completo para estabelecimentos comerciais, oferecendo controle eficiente de vendas, estoque e clientes. Com interface intuitiva, permite operações rápidas de vendas e emissão de notas fiscais. Oferece análises em tempo real para decisões estratégicas e identificação de tendências de mercado. Combinando praticidade e eficiência, é essencial para impulsionar o sucesso no varejo.                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button onclick="scrollToSection('sistemapdv')" name="servico" class="button button-a button-big button-rouded">Saiba Mais</button>
+                        </div>
+                    </div>
+                    <div class="box-shadow-full" style="text-align: center;">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="row">
+                                  <div class="col-sm-6 col-md-5">
+                                      <div class="about-img">
+                                          <img src="img/atendimmento.PNG" style="width: 300px; height: auto;" class="rounded b-shadow-a" alt="">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="about-me pt-4 pt-md-0">
+                                  <div class="title-box-2">
+                                      <h5 class="title-left">
+                                          Atendimento Especializado
+                                      </h5>
+                                  </div>
+                                  <p class="lead">
+                                    A Volgue Sistemas oferece atendimento especializado em tecnologia da informação, fornecendo soluções personalizadas e suporte técnico de qualidade. Com uma equipe qualificada, garantimos inovação, segurança e eficiência para nossos clientes. Nosso foco é proporcionar soluções tecnológicas alinhadas às melhores práticas do mercado. Estamos comprometidos em impulsionar o crescimento e a competitividade de nossos parceiros. Na Volgue Sistemas, estamos prontos para transformar ideias em realidade, promovendo o sucesso de sua empresa.                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                        <button onclick="scrollToSection('atendespeci')" name="servico" class="button button-a button-big button-rouded">Saiba Mais</button>
+                    </div>
+                  </div>
+                  <div class="box-shadow-full" style="text-align: center;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <div class="about-img">
+                                        <img src="img/app.PNG" style="width: 300px; height: auto;" class="rounded b-shadow-a" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-me pt-4 pt-md-0">
+                                <div class="title-box-2">
+                                    <h5 class="title-left">
+                                        App Volgue Sistemas
+                                    </h5>
+                                </div>
+                                <p class="lead">
+                                  Em breve, a Volgue Sistemas lançará seu novo aplicativo, oferecendo praticidade e eficiência aos usuários. Com recursos inovadores e interface intuitiva, nosso app promete revolucionar a experiência tecnológica. Desenvolvido com tecnologia de ponta, ele proporcionará soluções personalizadas para atender às necessidades individuais dos clientes. Esteja pronto para explorar a próxima geração de serviços e suporte da Volgue Sistemas. Em breve disponível nas principais lojas de aplicativos.                        </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button onclick="scrollToSection('appvolgue')"  name="servico" class="button button-a button-big button-rouded">Saiba Mais</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagina 3/Serviços -->
+
+    <section id="service" class="services-mf route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-a"><br>
+                            Design Patterns
+                        </h3>
+                        <div class="line-mf"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="icon ion-md-laptop"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <a href="webdesign.html">
+                            <h2 class="s-title">Web Design</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="icon ion-md-laptop"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <a href="webdevelopment.html">
+                            <h2 class="s-title">Web Development</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="icon ion-md-laptop"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <a href="responsivedesign.html">
+                            <h2 class="s-title">Responsive Design</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-Uv9jxBenhLL1+qzfUyxk5wrP+L5qvhwLTP60qjzTpL8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-KsRjqSIvQznv43EKdppYBn6tNtGKSQp7D4qU2P8N/uY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wHNqQXa6a5X6i67C4GvKNiiOUa7M7VYkPStStjqO5jWrGGIC8dQjNIlWZq8Aysu+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jY3zHTnfnHGOMHu1vUPEN8C9zFveqN+" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/easing/3.0.0/easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-SJ2Kfkzp69PgNOUuhWh8lvzjohnnoPCNKnrOEoMaPtCL8z4HTtW/xPtOQSZKpFN0UFbU/DG2bm3s2zM8FFIlcA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/CounterUp/2.3.0/jquery.counterup.min.js" integrity="sha512-eZYtkXONaC9By3XGZ/PN4PNac4rN3tK8upQ9U9jR73HGjXup0YXF+r+r0CFhi2Dn24y8U8B8ZXaGQCv73yA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-hzTunOHHWha0HxhiiSXL4UWCBRa/TCZCrsc5xwKJqFsLf/GJ2zBV/ONuDX9WcusnYbE7AWem/qEtqDM7DjvwTlw==" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        if(window.history.replaceState){
+        window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+    <script src="main.js"></script>
+
+    <!-- Pagina 4/Work -->
+
+    <section id="service2" class="services-mf route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title-box text-center">
+                        <h3 id="work" class="title-a"><br>
+                            Work
+                        </h3>
+                        <div class="line-mf"></div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-md-6">
+                              <div class="about-me pt-4 pt-md-0">
+                                <div class="title-box-2">
+                                  <h5 class="title-left">
+                                    Sistemas na Nuvem
+                                  </h5>
+                                </div>
+                                <p class="lead">
+                                  A transição para a cloud pode ser complexa e cara e pode não ser adequada para todos os aplicativos ou cargas de trabalho. É por isso que uma arquitetura multicloud híbrida é tão poderosa para as empresas de hoje ao equilibrar velocidade, agilidade, economia e considerações sazonais em infraestruturas de cloud pública e local. Equinix Hybrid Cloud e Cloud Management do portfólio de Serviços Gerenciados da Equinix no Brasil oferecem acesso a uma experiência completa de cloud híbrida com recursos dedicados e sob demanda.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-md-6"><br>
+                              <figure>
+                                <img src="img/nuvemilus.avif" style="width: 350px; height: auto;" class="rounded b-shadow-a" alt="">
+                                    <figcaption></figcaption>
+                              </figure>
+                            </div>
+                        </div>
+
+<div class="linha">
+    ____________________________________________________________________________________________________________________________________________________<br><br><br><br>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+      <div class="about-me pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Banco de Dados
+          </h5>
+        </div>
+        <p class="lead">
+            Um banco de dados é um sistema organizado para armazenar e gerenciar informações de forma eficiente. Ele é composto por uma estrutura que permite a inserção, atualização, consulta e exclusão de dados de forma segura e rápida. Os bancos de dados são amplamente utilizados em diversas áreas, desde sistemas de gestão empresarial até aplicativos de redes sociais.
+
+            Existem diferentes tipos de bancos de dados, mas um dos mais comuns é o banco de dados relacional. Nesse tipo de banco de dados, os dados são organizados em tabelas, que consistem em linhas e colunas.
+        </p>
       </div>
     </div>
+    <div class="col-md-6"><br><br>
+      <figure>
+        <img src="img/bancoilus.avif" style="width: 350px; height: auto;" class="rounded b-shadow-a" alt="">
+            <figcaption></figcaption>
+      </figure>
+    </div>
+</div><br><br>
+
+<div class="linha">
+    ____________________________________________________________________________________________________________________________________________________<br><br><br><br>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+      <div class="about-me pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Criação de sites estáticos
+          </h5>
+        </div>
+        <p class="lead">
+           
+Claro, aqui está uma explicação sobre a criação de sites estáticos:
+
+Um site estático é uma coleção de páginas da web que exibem conteúdo fixo para os usuários. Ao contrário dos sites dinâmicos, que são construídos com tecnologias de back-end para gerar conteúdo personalizado com base nas interações do usuário, os sites estáticos apresentam o mesmo conteúdo para todos os visitantes e não requerem um servidor web com capacidade de processamento dinâmico.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6"><br><br><br>
+      <figure>
+        <img src="img/criaçãoilus.avif" style="width: 350px; height: auto;" class="rounded b-shadow-a" alt="">
+            <figcaption></figcaption>
+      </figure>
+    </div>
+</div>
+</div></div></div></div></section>
+
+    <!-- Pagina 5/Saiba mais! -->
+
+<section id="service" class="services-mf route">
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <h1 class="cover-heading" contenteditable="true"><b>‌‌Lançamento em breve</b></h1>
-          <p class="lead">Soluções para empresas</p>
-          <a class="btn btn-lg btn-light" href="https://www.instagram.com/volgue_oficial/"><b class="">Saiba Mais</b></a>
-        </div>
-      </div>
-    </div>
-    <div class="container mt-auto">
-      <div class="row">
-        <div class="col-md-12"><a class="btn btn-link" style="color:#red" target="_blank" href="https://www.instagram.com/volgue_oficial/"><i class="fa fa-instagram" aria-hidden="true"></i> @volgue_oficial</a></div>
-      </div>
-      <div class="row">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-box text-center">
+                    <h3 id="saiba-mais" class="title-a">
+                        Saiba mais!
+                    </h3>
+                    <div class="line-mf"></div>
+                    <br>
+                    <div class="box-shadow-full" style="text-align: center;">
+                        <div class="row">
+                            <h5 id="sistemapdv" class="title-left">
+                                Sistema PDV 
+                            </h5>
+                        </div>
+                        <br>
+                        <p id="sistemapdv-text" class="lead">
+                            <!-- Texto inicial do sistema PDV aqui -->
+                            Um Sistema PDV (Ponto de Venda) é um software ou sistema utilizado por estabelecimentos comerciais para facilitar e gerenciar transações de vendas. Ele é projetado para operar em locais onde produtos ou serviços são vendidos diretamente aos clientes. O Sistema PDV permite que os vendedores registrem os itens comprados pelos clientes, calculem o total da compra, processem os pagamentos e gerem recibos para os clientes.
+                        </p>
+                        <p id="sistemapdv-more" class="lead" style="display: none;">
+                            <!-- Texto adicional do sistema PDV aqui -->
+                            Além dessas funções básicas, muitos sistemas PDV oferecem uma variedade de recursos adicionais, como:
+                            <br><br>
+                            ➜ Gerenciamento de Estoque: Acompanha o estoque de produtos disponíveis para venda e atualiza automaticamente os níveis de estoque conforme as vendas são realizadas.<br><br>
+                            ➜ Relatórios de Vendas: Gera relatórios detalhados sobre as vendas realizadas, permitindo que os proprietários de negócios analisem o desempenho das vendas ao longo do tempo e identifiquem padrões ou tendências.<br><br>
+                            ➜ Integração com Outros Sistemas: Pode se integrar a outros sistemas, como contabilidade, gestão de clientes ou sistemas de gestão empresarial (ERP), para fornecer uma visão abrangente das operações comerciais.<br><br>
+                            ➜ Segurança: Oferece recursos de segurança, como autenticação de usuário e criptografia de dados, para proteger as informações sensíveis dos clientes e as transações financeiras.<br><br>
+                            ➜ Personalização e Promoções: Alguns sistemas PDV permitem a personalização de recibos, a aplicação de descontos e a implementação de programas de fidelidade ou promoções especiais.<br><br><br>
+                            Em resumo, um Sistema PDV é uma ferramenta essencial para qualquer negócio que lida com vendas diretas ao consumidor, pois simplifica o processo de vendas, melhora a eficiência operacional e fornece insights valiosos para a gestão do negócio.
+                        </p>
+                        <button onclick="toggleText('sistemapdv-text', 'sistemapdv-more', 'btnLeiaMais')" id="btnLeiaMais">Leia Mais</button>
+                    </div>
+                    
+                                                
+                    <div class="box-shadow-full" style="text-align: center;">
+                        <div class="row">
+                            <h5 id="atendespeci" class="title-left">
+                                Atendimento Especializado
+                            </h5>
+                        </div>
+                        <br>
+                        <p id="atendespeci-text" class="lead">
+                            <!-- Texto inicial do atendimento especializado aqui -->
+                            Nosso compromisso com a inovação significa que estamos sempre procurando maneiras de utilizar as últimas tecnologias e tendências do mercado para melhorar os processos e resultados de nossos clientes. Além disso, priorizamos a segurança em todas as etapas do desenvolvimento e implementação de nossas soluções, garantindo a proteção dos dados e sistemas críticos.
+                        </p>
+                        <p id="atendespeci-more" class="lead" style="display: none;">
+                            <!-- Texto adicional do atendimento especializado aqui -->
+                            Nossa equipe altamente qualificada e experiente está à disposição para oferecer suporte técnico dedicado e orientação especializada sempre que necessário. Entendemos a importância da disponibilidade e confiabilidade de sistemas de TI para o funcionamento contínuo dos negócios, e estamos comprometidos em fornecer um suporte rápido e eficaz para resolver quaisquer problemas que possam surgir.
+                    
+                            Na Volgue Sistemas, acreditamos que o sucesso de nossos clientes é o nosso sucesso. É por isso que nos esforçamos para não apenas atender, mas superar as expectativas, ajudando a impulsionar o crescimento e a competitividade de suas empresas. Estamos ansiosos para fazer parte do seu caminho para o sucesso e transformar suas ideias em realidade.
+                        </p>
+                        <button onclick="toggleText('atendespeci-text', 'atendespeci-more', 'btnLeiaMais2')" id="btnLeiaMais2">Leia Mais</button>
+                    </div>
+                    
+                                                                                <br>
+                                                                                <div class="box-shadow-full" style="text-align: center;">
+                                                                                    <div class="row">
+                                                                                        <h5 id="appvolgue" class="title-left">
+                                                                                            App Volgue Sistemas 
+                                                                                        </h5>
+                                                                                    </div>
+                                                                                    <br>
+                                                                                    <p id="appvolgue-text" class="lead">
+                                                                                        <!-- Texto inicial do aplicativo Volgue Sistemas aqui -->
+                                                                                        Em breve, a Volgue Sistemas lançará seu novo aplicativo, oferecendo praticidade e eficiência aos usuários. Com recursos inovadores e interface intuitiva, nosso app promete revolucionar a experiência tecnológica. Desenvolvido com tecnologia de ponta, ele proporcionará soluções personalizadas para atender às necessidades individuais dos clientes Esteja pronto para explorar a próxima geração de serviços e suporte da Volgue Sistemas. Em breve disponível nas principais lojas de aplicativos.
+                                                                                    </p>
+                                                                                    <p id="appvolgue-more" class="lead" style="display: none;">
+                                                                                        <!-- Texto adicional do aplicativo Volgue Sistemas aqui -->
+                                                                                        Fique atento para descobrir como nossa equipe dedicada e talentosa está elevando o padrão de excelência no mundo da tecnologia. Com um compromisso inabalável com a inovação, estamos moldando o futuro digital com o nosso novo aplicativo. Não perca a oportunidade de fazer parte dessa revolução. Acompanhe-nos para uma jornada emocionante rumo à excelência tecnológica. Estamos ansiosos para compartilhar essa experiência com você.
+                                                                                    </p>
+                                                                                    <button onclick="toggleText('appvolgue-text', 'appvolgue-more', 'btnLeiaMais3')" id="btnLeiaMais3">Leia Mais</button>
+                                                                                </div>
+                                                                                
+                                                                                                                </div>
+                                                                                                                </div>
+                                                                                                                        
+                                                                                                                    
+
+                                                                                                                    <!-- Explicação de o por que escolher a Volgue -->
+
+                                                                                                                    <section id="service" class="services-mf route">
+                                                                                                                        <div class="container">
+                                                                                                                            <div class="row">
+                                                                                                                                <div class="col-sm-12">
+                                                                                                                                    <div class="title-box text-center">
+                                                                                                                                        <h3 id="" class="title-a"><br>
+                                                                                                                                            Por que escolher a Volgue Sistemas?
+                                                                                                                                        </h3>
+                                                                                                                                        <div class="line-mf"></div>
+                                                                                                                                        <br><br><br>
+                                                                                                                                        
+                                                                                                                                        <div class="row">
+                                                                                                                                            <div class="col-md-6">
+                                                                                                                                              <div class="about-me pt-4 pt-md-0">
+                                                                                                                                                <div class="title-box-2">
+                                                                                                                                                  <h5 class="title-left">
+                                                                                                                                                    Por que?
+                                                                                                                                                  </h5>
+                                                                                                                                                </div>
+                                                                                                                                                <p class="lead">
+                                                                                                                                                    Nossos Serviços Profissionais é uma solução que pode ser adotada por qualquer empresa. Essencialmente essa modalidade de serviço serve para economizar dinheiro, escalar com maior facilidade e mais rápido. Esses objetivos podem ser alcançados de diversas formas.<br><br>
+                                                                                                                                                    <ul>
+                                                                                                                                                        <li>➜ Experiência e reputação:</li>
+                                                                                                                                                        <li>➜ Funcionalidades abrangentes:</li>
+                                                                                                                                                        <li>➜ Facilidade de uso:</li>
+                                                                                                                                                        <li>➜ Suporte ao cliente:</li>
+                                                                                                                                                        <li>➜ Preço e custo-benefício:</li>
+                                                                                                                                                    </ul><br><br>
+                                                                                                                                                </div>
+                                                                                                                                                </div>
+                                                                                                                                            <div class="ilustrativa-img">
+                                                                                                                                                <div><br><br><br><br>
+                                                                                                                                                  <figure>
+                                                                                                                                                    <img src="img/ilustrativa.jpg" style="width: 200px; height: auto;" class="rounded b-shadow-a" alt="">
+                                                                                                                                                        <figcaption></figcaption>
+                                                                                                                                                <div class="ilustrativa2-img">
+                                                                                                                                                    <img src="img/illustration2.avif" width="400px" alt="">
+                                                                                                                                                </div>
+                                                                                                                                                  </figure>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                                </section>
+
+                                                                                                                                                <!-- Sistemas de Cookies -->
+                                                                                                                                  
+                                                                                                                                                    <div class="cookies-msg" id="cokies-msg">
+                                                                                                                                                        <div class="cookies-txt">
+                                                                                                                                                            <p>
+                                                                                                                                                                Este site usa cookies para melhorar sua experiência. Ao continuar navegando você concorda com o uso dos cookies, termos e políticas do site.</p>
+                                                                                                                                                
+                                                                                                                                                                <div class="cookies-btn">
+                                                                                                                                                                    <button onclick="aceito()">Aceito</button>
+                                                                                                                                                                </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+
+
+   
+
+    
+    
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- Formulario/Fale conosco -->
+
+<div id="home" class="intro route bg-image" style="background-image: url('img/fundo_walpapers.jpg'); ">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+        <div class="table-cell">
+            <div class="container">
+                <div class="contact-mf">
+<div id="contact" class="box-shadow-full">
+    <div class="row">
         <div class="col-md-12">
-          <p class="mt-auto text-secondary">Direitos reservados <a href="https://www.instagram.com/cleytonjsales/" class="text-white">Cleyton Sales</a> by <a href="https://www.instagram.com/cleytonjsales/" class="text-white">@cleytonjsales</a>.</p>
+            <div class="title-box-2">
+                <h5 class="title-left">
+                    Envie uma mensagem
+                </h5>
+            </div>
+            <div>
+                <form action="https://formspree.io/f/mjvnzajr"
+                method="POST" id="cf" method="post" role="form">
+                    <div id="sendmessage">Obrigado pelo envio!</div>
+                    <div id="errormessage"></div>
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <input type="text" name="nome" class="form-control" placeholder="Nome e Sobrenome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="assunto" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <input class="form-control" name="mensagem" rows="5" data-rule="required" placeholder="Mensagem" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" name="submit" class="button button-a button-big button-rouded">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
+    </div>
+</div>
+    </div>
+        </div>
+            </div>
+                </div>
+                    </div>
+       
+<!-- Rodapé -->
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <!-- Desktop Footer -->
+      <div class="col-md-12 footer-desktop">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="logo-rodape">
+              <img src="img/logo_semfundo.png" width="180" height="auto" alt="Logo">
+            </div>
+            <div class="sobre-rdp">
+              <br><p class="lead">A Volgue Sistemas é uma empresa de tecnologia brasileira que se destaca no desenvolvimento de soluções de software para diferentes setores.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h6>Social</h6>
+            <ul class="footer-links">
+              <li><a href="https://www.instagram.com/volgue_oficial/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+              <li><a href="mailto:volguesistemas@gmail.com"><i class="fa fa-envelope"></i> volguesistemas@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Links</h6>
+            <ul class="footer-links">
+              <li><a href="index.html#home">Home</a></li>
+              <li><a href="index.html#about">Sobre</a></li>
+              <li><a href="index.html#service">Serviços</a></li>
+              <li><a href="index.html#work">Work</a></li>
+              <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Footer -->
+      <div>
+        <p class="copyright-text">Copyright &copy; 2024 <a href="https://www.instagram.com/_____messias/" target="_blank">Carlos Daniel</a> e <a href="https://www.instagram.com/0messias_/" target="_blank">Maria Eduarda</a> - All Rights Reserved.</p>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" style=""></script>
-</body>
+</footer>
 
+<!-- Footer Mobile -->
+
+<footer class="footer-mobile">
+    <p class="copyright-text">Copyright &copy; 2024 <a href="https://www.instagram.com/_____messias/" target="_blank">Carlos Daniel</a> e <a href="https://www.instagram.com/0messias_/" target="_blank">Maria Eduarda</a> - All Rights Reserved.</p>
+  </footer>
+
+
+</body>
 </html>
